@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:get/get.dart';
 import 'package:travel_friends/constants/constants_page.dart';
 
 class MyHomePage extends StatelessWidget {
@@ -42,68 +41,22 @@ class MyHomePage extends StatelessWidget {
                       const TextField(),
                       Container(
                           decoration: const BoxDecoration(
-                              color: Colors.amber,
+                              color: Color.fromARGB(255, 94, 163, 140),
                               borderRadius:
                                   BorderRadius.all(Radius.circular(30))),
                           width: MediaQuery.of(context).size.width * 0.90,
                           height: 50,
                           child: TextButton(
                             onPressed: () {},
-                            child: const Text("Ara"),
+                            child: const Text(
+                              "Ara",
+                              style: TextStyle(color: Colors.white),
+                            ),
                           ))
                     ],
                   ),
                 ),
               )
-            ],
-          ),
-        ),
-        bottomNavigationBar: SizedBox(
-          width: double.infinity,
-          height: MediaQuery.of(context).size.height * 0.10,
-          child: BottomNavigationBar(
-            type: BottomNavigationBarType.fixed,
-            currentIndex: 0,
-            onTap: (index) {
-              switch (index) {
-                case 0:
-                  Get.toNamed('/MyHomePage');
-                  break;
-                case 1:
-                  Get.toNamed('/page2');
-                  break;
-                case 2:
-                  Get.toNamed('/page3');
-                  break;
-                case 3:
-                  Get.toNamed('/page4');
-                  break;
-                case 4:
-                  Get.toNamed('/page5');
-                  break;
-              }
-            },
-            items: const [
-              BottomNavigationBarItem(
-                icon: Icon(Icons.search),
-                label: 'Ara',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.travel_explore),
-                label: 'Yolculuklar',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.access_alarms_outlined),
-                label: 'Yayınla',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.message),
-                label: 'Mesajlar',
-              ),
-              BottomNavigationBarItem(
-                icon: Icon(Icons.person),
-                label: 'Profil',
-              ),
             ],
           ),
         ),

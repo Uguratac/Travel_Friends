@@ -5,5 +5,5 @@ class Constants {
   static String signupText = "Sign Up";
   static String switchText = "Remember me";
   static String passText = "Forgot my password";
-  static String bottomText = "Do yo have an account";
+  static String bottomText = "Do yo have an account ?";
 }

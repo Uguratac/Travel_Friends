@@ -1,8 +1,8 @@
 import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:get/get.dart';
-import 'package:travel_friends/pages/home_page.dart';
 import 'package:travel_friends/pages/login_page.dart';
+import 'package:travel_friends/widgets/tabbar_page.dart';
 import 'package:travel_friends/widgets/controller.dart';
 
 class AuthService {
@@ -83,7 +83,7 @@ class AuthService {
               duration: const Duration(seconds: 1));
 
           Future.delayed(const Duration(seconds: 2), () {
-            Get.to(() => const MyHomePage());
+            Get.to(() => const MyTabbar());
           });
         } else {
           Get.snackbar('Giriş Başarısız', 'Kullanıcı Bulunamadı');
